@@ -13,6 +13,7 @@
 		21631F5F281CAE93003B8725 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21631F5D281CAE93003B8725 /* Main.storyboard */; };
 		21631F61281CAE98003B8725 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21631F60281CAE98003B8725 /* Assets.xcassets */; };
 		21631F64281CAE98003B8725 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21631F62281CAE98003B8725 /* LaunchScreen.storyboard */; };
+		54C445075A5FEB221880B1D5 /* Pods_Dardesh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72CF15BC1EEB915F138FCDCE /* Pods_Dardesh.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		21631F60281CAE98003B8725 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		21631F63281CAE98003B8725 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		21631F65281CAE98003B8725 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6F39C4BAE55E98A3111B31B0 /* Pods-Dardesh.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dardesh.debug.xcconfig"; path = "Target Support Files/Pods-Dardesh/Pods-Dardesh.debug.xcconfig"; sourceTree = "<group>"; };
+		72CF15BC1EEB915F138FCDCE /* Pods_Dardesh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dardesh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		949430FE2CD7F211DAF4C8F5 /* Pods-Dardesh.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dardesh.release.xcconfig"; path = "Target Support Files/Pods-Dardesh/Pods-Dardesh.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54C445075A5FEB221880B1D5 /* Pods_Dardesh.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				21631F56281CAE93003B8725 /* Dardesh */,
 				21631F55281CAE93003B8725 /* Products */,
+				67D6DE5BB2A9DD9ABB5C545A /* Pods */,
+				A66B0061EA876953D1176C09 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,24 @@
 			path = Dardesh;
 			sourceTree = "<group>";
 		};
+		67D6DE5BB2A9DD9ABB5C545A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6F39C4BAE55E98A3111B31B0 /* Pods-Dardesh.debug.xcconfig */,
+				949430FE2CD7F211DAF4C8F5 /* Pods-Dardesh.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A66B0061EA876953D1176C09 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				72CF15BC1EEB915F138FCDCE /* Pods_Dardesh.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 21631F68281CAE98003B8725 /* Build configuration list for PBXNativeTarget "Dardesh" */;
 			buildPhases = (
+				D28E73CEF4BB3D44F28F3B8F /* [CP] Check Pods Manifest.lock */,
 				21631F50281CAE93003B8725 /* Sources */,
 				21631F51281CAE93003B8725 /* Frameworks */,
 				21631F52281CAE93003B8725 /* Resources */,
+				E4548F37D34BCA0EF3BC3CA9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D28E73CEF4BB3D44F28F3B8F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Dardesh-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E4548F37D34BCA0EF3BC3CA9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Dardesh/Pods-Dardesh-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Dardesh/Pods-Dardesh-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Dardesh/Pods-Dardesh-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		21631F50281CAE93003B8725 /* Sources */ = {
@@ -284,6 +353,7 @@
 		};
 		21631F69281CAE98003B8725 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F39C4BAE55E98A3111B31B0 /* Pods-Dardesh.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -311,6 +381,7 @@
 		};
 		21631F6A281CAE98003B8725 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 949430FE2CD7F211DAF4C8F5 /* Pods-Dardesh.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
