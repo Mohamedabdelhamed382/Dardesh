@@ -15,6 +15,7 @@
 		21631F64281CAE98003B8725 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21631F62281CAE98003B8725 /* LaunchScreen.storyboard */; };
 		21631F6D281CCBC6003B8725 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 21631F6C281CCBC6003B8725 /* Realm */; };
 		21631F6F281CCBC6003B8725 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 21631F6E281CCBC6003B8725 /* RealmSwift */; };
+		21631F71281CF743003B8725 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 21631F70281CF743003B8725 /* GoogleService-Info.plist */; };
 		54C445075A5FEB221880B1D5 /* Pods_Dardesh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72CF15BC1EEB915F138FCDCE /* Pods_Dardesh.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		21631F60281CAE98003B8725 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		21631F63281CAE98003B8725 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		21631F65281CAE98003B8725 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		21631F70281CF743003B8725 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6F39C4BAE55E98A3111B31B0 /* Pods-Dardesh.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dardesh.debug.xcconfig"; path = "Target Support Files/Pods-Dardesh/Pods-Dardesh.debug.xcconfig"; sourceTree = "<group>"; };
 		72CF15BC1EEB915F138FCDCE /* Pods_Dardesh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dardesh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		949430FE2CD7F211DAF4C8F5 /* Pods-Dardesh.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dardesh.release.xcconfig"; path = "Target Support Files/Pods-Dardesh/Pods-Dardesh.release.xcconfig"; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 				21631F60281CAE98003B8725 /* Assets.xcassets */,
 				21631F62281CAE98003B8725 /* LaunchScreen.storyboard */,
 				21631F65281CAE98003B8725 /* Info.plist */,
+				21631F70281CF743003B8725 /* GoogleService-Info.plist */,
 			);
 			path = Dardesh;
 			sourceTree = "<group>";
@@ -163,6 +166,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				21631F64281CAE98003B8725 /* LaunchScreen.storyboard in Resources */,
+				21631F71281CF743003B8725 /* GoogleService-Info.plist in Resources */,
 				21631F61281CAE98003B8725 /* Assets.xcassets in Resources */,
 				21631F5F281CAE93003B8725 /* Main.storyboard in Resources */,
 			);
