@@ -13,8 +13,6 @@
 		21631F5F281CAE93003B8725 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21631F5D281CAE93003B8725 /* Main.storyboard */; };
 		21631F61281CAE98003B8725 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21631F60281CAE98003B8725 /* Assets.xcassets */; };
 		21631F64281CAE98003B8725 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21631F62281CAE98003B8725 /* LaunchScreen.storyboard */; };
-		21631F6D281CCBC6003B8725 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 21631F6C281CCBC6003B8725 /* Realm */; };
-		21631F6F281CCBC6003B8725 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 21631F6E281CCBC6003B8725 /* RealmSwift */; };
 		21631F71281CF743003B8725 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 21631F70281CF743003B8725 /* GoogleService-Info.plist */; };
 		54C445075A5FEB221880B1D5 /* Pods_Dardesh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72CF15BC1EEB915F138FCDCE /* Pods_Dardesh.framework */; };
 /* End PBXBuildFile section */
@@ -39,8 +37,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21631F6F281CCBC6003B8725 /* RealmSwift in Frameworks */,
-				21631F6D281CCBC6003B8725 /* Realm in Frameworks */,
 				54C445075A5FEB221880B1D5 /* Pods_Dardesh.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -117,8 +113,6 @@
 			);
 			name = Dardesh;
 			packageProductDependencies = (
-				21631F6C281CCBC6003B8725 /* Realm */,
-				21631F6E281CCBC6003B8725 /* RealmSwift */,
 			);
 			productName = Dardesh;
 			productReference = 21631F54281CAE93003B8725 /* Dardesh.app */;
@@ -149,7 +143,6 @@
 			);
 			mainGroup = 21631F4B281CAE93003B8725;
 			packageReferences = (
-				21631F6B281CCBC6003B8725 /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = 21631F55281CAE93003B8725 /* Products */;
 			projectDirPath = "";
@@ -378,6 +371,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -406,6 +400,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -443,30 +438,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		21631F6B281CCBC6003B8725 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/realm/realm-swift.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		21631F6C281CCBC6003B8725 /* Realm */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 21631F6B281CCBC6003B8725 /* XCRemoteSwiftPackageReference "realm-swift" */;
-			productName = Realm;
-		};
-		21631F6E281CCBC6003B8725 /* RealmSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 21631F6B281CCBC6003B8725 /* XCRemoteSwiftPackageReference "realm-swift" */;
-			productName = RealmSwift;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 21631F4C281CAE93003B8725 /* Project object */;
 }
