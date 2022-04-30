@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Dardesh" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="Dardesh" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -29,8 +29,11 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="4jN-ra-h9W">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="68.333333333333329"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LFi-jF-PsZ">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LFi-jF-PsZ">
                                                 <rect key="frame" x="0.0" y="0.0" width="382" height="20.333333333333332"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20.329999999999998" id="jW8-iz-yJv"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -48,7 +51,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="peb-ye-is3">
                                         <rect key="frame" x="0.0" y="77.333333333333343" width="382" height="65.333333333333343"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xAJ-O1-j9U">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xAJ-O1-j9U">
                                                 <rect key="frame" x="0.0" y="0.0" width="382" height="20.333333333333332"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -57,14 +60,14 @@
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Iqt-Ag-XYa">
                                                 <rect key="frame" x="0.0" y="25.333333333333343" width="382" height="40"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="o8L-ug-zpk">
                                         <rect key="frame" x="0.0" y="151.66666666666669" width="382" height="68.333333333333314"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o6w-eh-2DF">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o6w-eh-2DF">
                                                 <rect key="frame" x="0.0" y="0.0" width="382" height="20.333333333333332"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -73,7 +76,7 @@
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zg2-7v-QUg">
                                                 <rect key="frame" x="0.0" y="28.333333333333314" width="382" height="40"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -84,18 +87,26 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="181" height="31"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Forget Password?"/>
+                                                <connections>
+                                                    <action selector="forgetPasswordPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NXl-X7-a8Y"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HIX-3Z-oC7">
                                                 <rect key="frame" x="201" y="0.0" width="181" height="31"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Resend Email !"/>
+                                                <connections>
+                                                    <action selector="resendEmailPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ndR-PV-Kvh"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="Iqt-Ag-XYa" firstAttribute="height" secondItem="PTF-rs-XDT" secondAttribute="height" id="Eq1-3C-j1a"/>
+                                    <constraint firstItem="xAJ-O1-j9U" firstAttribute="height" secondItem="LFi-jF-PsZ" secondAttribute="height" id="brc-JX-Wj1"/>
                                     <constraint firstItem="zg2-7v-QUg" firstAttribute="height" secondItem="Iqt-Ag-XYa" secondAttribute="height" id="ilk-yM-iiT"/>
+                                    <constraint firstItem="o6w-eh-2DF" firstAttribute="height" secondItem="xAJ-O1-j9U" secondAttribute="height" id="p2i-64-Dhf"/>
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="SVm-wj-uKh">
@@ -122,22 +133,28 @@
                                                 </fragment>
                                             </attributedString>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="registerPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kxX-Ub-qIF"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Oom-Ek-bKF">
-                                <rect key="frame" x="97.333333333333329" y="680" width="219.33333333333337" height="31"/>
+                                <rect key="frame" x="96.666666666666671" y="680" width="220.66666666666663" height="31"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Have an account ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XD8-d8-6a3">
-                                        <rect key="frame" x="0.0" y="0.0" width="140" height="31"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Have an Account ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XD8-d8-6a3">
+                                        <rect key="frame" x="0.0" y="0.0" width="141.33333333333334" height="31"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H2x-vy-9LN">
-                                        <rect key="frame" x="160" y="0.0" width="59.333333333333343" height="31"/>
+                                        <rect key="frame" x="161.33333333333331" y="0.0" width="59.333333333333343" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Login"/>
+                                        <connections>
+                                            <action selector="loginPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hNy-kY-WcA"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -157,6 +174,16 @@
                             <constraint firstItem="SVm-wj-uKh" firstAttribute="leading" secondItem="fPx-Tr-p9Q" secondAttribute="leading" id="v34-wi-I70"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="confirmPasswordLabelOutlet" destination="o6w-eh-2DF" id="Z5H-aX-eeb"/>
+                        <outlet property="confirmPasswordTextFieldOutlet" destination="zg2-7v-QUg" id="xg6-Jk-YwD"/>
+                        <outlet property="emailLabelOutlet" destination="LFi-jF-PsZ" id="fma-o2-Ued"/>
+                        <outlet property="emailTextFieldOutlet" destination="PTF-rs-XDT" id="URC-sh-EaV"/>
+                        <outlet property="haveAnAccountLabelOutlet" destination="XD8-d8-6a3" id="Pcd-kv-gwR"/>
+                        <outlet property="passwordLabelOutlet" destination="xAJ-O1-j9U" id="HL9-Mv-kNd"/>
+                        <outlet property="passwordTextFieldOutlet" destination="Iqt-Ag-XYa" id="uJl-zS-XbF"/>
+                        <outlet property="titleOutlet" destination="xK7-U0-JEU" id="Aor-LY-wi7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
