@@ -15,6 +15,9 @@ class LoginViewController: UIViewController {
         
     }
 
+    //MARK: - variables
+    var isLogin: Bool = false
+    
     //MARK: - IBOutlets
     
     @IBOutlet weak var titleOutlet: UILabel!
@@ -30,6 +33,12 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTextFieldOutlet: UITextField!
     @IBOutlet weak var confirmPasswordTextFieldOutlet: UITextField!
     
+    //button Outlet
+    @IBOutlet weak var forgetPasswordOutlet: UIButton!
+    @IBOutlet weak var resendEmailOutlet: UIButton!
+    @IBOutlet weak var registerOutlet: UIButton!
+    @IBOutlet weak var loginOutlet: UIButton!
+    
     //MARK: - IBAction
     @IBAction func forgetPasswordPressed(_ sender: UIButton) {
     }
@@ -38,6 +47,27 @@ class LoginViewController: UIViewController {
     @IBAction func registerPressed(_ sender: UIButton) {
     }
     @IBAction func loginPressed(_ sender: UIButton) {
+        updateUIMode(mode: isLogin)
+    }
+    
+    //MARK: - Methods
+    
+    private func updateUIMode(mode: Bool) {
+        let titleMode: String = !mode ? "Login" : "Register"
+        
+        loginOutlet.setTitle(!mode ? "Register" : "Login", for: .normal)
+        registerOutlet.setTitle(titleMode, for: .normal)
+
+        titleOutlet.text = titleMode
+        haveAnAccountLabelOutlet.text = !mode ? "New Here?" : "Have an Account?"
+        
+        
+        confirmPasswordLabelOutlet.isHidden = !mode ? true : false
+        confirmPasswordTextFieldOutlet.isHidden = !mode ? true : false
+        forgetPasswordOutlet.isHidden = mode ? true : false
+        resendEmailOutlet.isHidden = !mode ? true : false
+
+        isLogin.toggle()
     }
     
 }

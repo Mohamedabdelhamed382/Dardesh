@@ -83,8 +83,8 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="PM4-8R-0lS">
                                         <rect key="frame" x="0.0" y="229.00000000000003" width="382" height="30.999999999999972"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6kf-vl-1f8">
-                                                <rect key="frame" x="0.0" y="0.0" width="181" height="31"/>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6kf-vl-1f8">
+                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="31"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Forget Password?"/>
                                                 <connections>
@@ -92,7 +92,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HIX-3Z-oC7">
-                                                <rect key="frame" x="201" y="0.0" width="181" height="31"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="382" height="31"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Resend Email !"/>
                                                 <connections>
@@ -153,7 +153,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Login"/>
                                         <connections>
-                                            <action selector="loginPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hNy-kY-WcA"/>
+                                            <action selector="loginPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cVT-qB-0bx"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -179,9 +179,13 @@
                         <outlet property="confirmPasswordTextFieldOutlet" destination="zg2-7v-QUg" id="xg6-Jk-YwD"/>
                         <outlet property="emailLabelOutlet" destination="LFi-jF-PsZ" id="fma-o2-Ued"/>
                         <outlet property="emailTextFieldOutlet" destination="PTF-rs-XDT" id="URC-sh-EaV"/>
+                        <outlet property="forgetPasswordOutlet" destination="6kf-vl-1f8" id="fRX-2A-2ua"/>
                         <outlet property="haveAnAccountLabelOutlet" destination="XD8-d8-6a3" id="Pcd-kv-gwR"/>
+                        <outlet property="loginOutlet" destination="H2x-vy-9LN" id="kdo-d9-P9S"/>
                         <outlet property="passwordLabelOutlet" destination="xAJ-O1-j9U" id="HL9-Mv-kNd"/>
                         <outlet property="passwordTextFieldOutlet" destination="Iqt-Ag-XYa" id="uJl-zS-XbF"/>
+                        <outlet property="registerOutlet" destination="Suw-3r-5ha" id="viK-E1-Stm"/>
+                        <outlet property="resendEmailOutlet" destination="HIX-3Z-oC7" id="lJI-d9-MW4"/>
                         <outlet property="titleOutlet" destination="xK7-U0-JEU" id="Aor-LY-wi7"/>
                     </connections>
                 </viewController>
