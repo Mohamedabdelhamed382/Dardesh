@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import SwiftUI
+import ProgressHUD
 
 public enum Mode {
     case login
@@ -19,7 +19,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureDelegate()
-        
+        setupBagroundTap()
     }
 
     //MARK: - variables
@@ -48,26 +48,14 @@ class LoginViewController: UIViewController {
     
     //MARK: - IBAction
     @IBAction func forgetPasswordPressed(_ sender: UIButton) {
-        if isDataInputFor(mode: .forgetPassword) {
-            print ("Data Input Correct")
-            //MARK: - TODO
-            //ResetPassword
-        } else {
-            print ("Print all Fields All Required")
-        }
+        checkDataInput(mode: .forgetPassword)
     }
     
     @IBAction func resendEmailPressed(_ sender: UIButton) {
     }
     
     @IBAction func registerPressed(_ sender: UIButton) {
-        if isDataInputFor(mode: isLogin ? .login : .register) {
-            print ("Data Input Correct")
-            //MARK: - TODO
-            //LOGIN OR REGISTER
-        } else {
-            print ("Print all Fields All Required")
-        }
+        checkDataInput(mode: .register)
     }
     
     @IBAction func loginPressed(_ sender: UIButton) {
@@ -75,7 +63,6 @@ class LoginViewController: UIViewController {
     }
     
     //MARK: - Methods
-    
     private func updateUIMode(mode: Bool) {
         let titleMode: String = !mode ? "Login" : "Register"
         
@@ -85,7 +72,6 @@ class LoginViewController: UIViewController {
         titleOutlet.text = titleMode
         haveAnAccountLabelOutlet.text = !mode ? "New Here?" : "Have an Account?"
         
-        
         confirmPasswordLabelOutlet.isHidden = !mode ? true : false
         confirmPasswordTextFieldOutlet.isHidden = !mode ? true : false
         forgetPasswordOutlet.isHidden = mode ? true : false
@@ -94,10 +80,8 @@ class LoginViewController: UIViewController {
         isLogin.toggle()
     }
     
-
     //MARK: - Helper Method
-    
-    func isDataInputFor(mode: Mode) -> Bool {
+    private func isDataInputFor(mode: Mode) -> Bool {
         switch mode {
         case .login:
             return emailTextFieldOutlet.text != "" && passwordTextFieldOutlet.text != ""
@@ -107,10 +91,46 @@ class LoginViewController: UIViewController {
             return emailTextFieldOutlet.text != ""
         }
     }
+    
+    private func checkDataInput(mode: Mode) {
+        switch mode {
+        case .login:
+            break
+        case .register:
+            if isDataInputFor(mode: isLogin ? .login : .register) {
+                print ("Data Input Correct")
+                ProgressHUD.showError("Data Input Correctlly")
+                //MARK: - TODO
+                //LOGIN OR REGISTER
+            } else {
+                print ("all Fields is Required")
+                ProgressHUD.showError("all Fields is Required")
+            }
+        case .forgetPassword:
+            if isDataInputFor(mode: .forgetPassword) {
+                ProgressHUD.showError("Data Input Correctlly")
+                //MARK: - TODO
+                //ResetPassword
+            } else {
+                print ("all Fields is Required")
+                ProgressHUD.showError("all Fields is Required")
+            }
+        }
+    }
+    
+    //MARK: - Tap Gesture Recognizer
+    private func setupBagroundTap() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+        view.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc
+    func hideKeyboard() {
+        view.endEditing(false)
+    }
 }
 
 //MARK: - TextFelid Delegate Extension
-
 extension LoginViewController: UITextFieldDelegate {
     
     func configureDelegate() {
@@ -124,6 +144,4 @@ extension LoginViewController: UITextFieldDelegate {
         passwordLabelOutlet.text = passwordTextFieldOutlet.hasText ? "Password" : ""
         confirmPasswordLabelOutlet.text = confirmPasswordTextFieldOutlet.hasText ? "Confirm Password" : ""
     }
-    
-    
 }
