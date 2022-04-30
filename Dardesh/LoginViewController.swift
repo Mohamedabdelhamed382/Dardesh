@@ -6,6 +6,13 @@
 //
 
 import UIKit
+import SwiftUI
+
+public enum Mode {
+    case login
+    case register
+    case forgetPassword
+}
 
 class LoginViewController: UIViewController {
 
@@ -41,11 +48,28 @@ class LoginViewController: UIViewController {
     
     //MARK: - IBAction
     @IBAction func forgetPasswordPressed(_ sender: UIButton) {
+        if isDataInputFor(mode: .forgetPassword) {
+            print ("Data Input Correct")
+            //MARK: - TODO
+            //ResetPassword
+        } else {
+            print ("Print all Fields All Required")
+        }
     }
+    
     @IBAction func resendEmailPressed(_ sender: UIButton) {
     }
+    
     @IBAction func registerPressed(_ sender: UIButton) {
+        if isDataInputFor(mode: isLogin ? .login : .register) {
+            print ("Data Input Correct")
+            //MARK: - TODO
+            //LOGIN OR REGISTER
+        } else {
+            print ("Print all Fields All Required")
+        }
     }
+    
     @IBAction func loginPressed(_ sender: UIButton) {
         updateUIMode(mode: isLogin)
     }
@@ -70,6 +94,19 @@ class LoginViewController: UIViewController {
         isLogin.toggle()
     }
     
+
+    //MARK: - Helper Method
+    
+    func isDataInputFor(mode: Mode) -> Bool {
+        switch mode {
+        case .login:
+            return emailTextFieldOutlet.text != "" && passwordTextFieldOutlet.text != ""
+        case .register:
+            return emailTextFieldOutlet.text != "" && passwordTextFieldOutlet.text != "" && confirmPasswordTextFieldOutlet.text != ""
+        case .forgetPassword:
+            return emailTextFieldOutlet.text != ""
+        }
+    }
 }
 
 //MARK: - TextFelid Delegate Extension
