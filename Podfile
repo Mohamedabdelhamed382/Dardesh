@@ -16,6 +16,7 @@ pod 'Firebase/Messaging'
 pod 'FirebaseFirestoreSwift'
 
 pod 'Gallery'
+pod 'RealmSwift', '~>10'
 
 pod 'ProgressHUD'
 pod 'SKPhotoBrowser'

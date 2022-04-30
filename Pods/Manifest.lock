@@ -362,6 +362,11 @@ PODS:
   - ProgressHUD (13.6)
   - PromisesObjC (1.2.12)
   - Protobuf (3.19.4)
+  - Realm (10.24.1):
+    - Realm/Headers (= 10.24.1)
+  - Realm/Headers (10.24.1)
+  - RealmSwift (10.24.1):
+    - Realm (= 10.24.1)
   - SKPhotoBrowser (7.0.0)
 
 DEPENDENCIES:
@@ -376,6 +381,7 @@ DEPENDENCIES:
   - InputBarAccessoryView
   - MessageKit
   - ProgressHUD
+  - RealmSwift (~> 10)
   - SKPhotoBrowser
 
 SPEC REPOS:
@@ -407,6 +413,8 @@ SPEC REPOS:
     - ProgressHUD
     - PromisesObjC
     - Protobuf
+    - Realm
+    - RealmSwift
     - SKPhotoBrowser
 
 SPEC CHECKSUMS:
@@ -437,8 +445,10 @@ SPEC CHECKSUMS:
   ProgressHUD: 4bdaa0d2ddf676b23324b199f9facffb5c3a1620
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
   Protobuf: 235750e4696ff59fb07d949a9dbbc92b3c0700fe
+  Realm: f9bc5a212a9ab084b4ed90cda1c28d835a38a06b
+  RealmSwift: 0b03bb38001bee4280dcc27709e6b33f438cfad1
   SKPhotoBrowser: 6aaa8f232752e87c7e76bace183bead0a137097d
 
-PODFILE CHECKSUM: 378a75c428e9c4f6729aa10a2d62c72adbba46ab
+PODFILE CHECKSUM: e787dca41a047410a1737d3c38eca0f99bdfb1a4
 
 COCOAPODS: 1.11.3
