@@ -104,17 +104,13 @@ class LoginViewController: UIViewController {
             break
         case .register:
             if isDataInputFor(mode: isLogin ? .login : .register) {
-                print ("Data Input Correct")
-                ProgressHUD.showSucceed("Data Input Correctlly")
                 if isLogin == false {
-                    //Register
                     if passwordTextFieldOutlet.text == confirmPasswordTextFieldOutlet.text {
                         self.registerUser(email: email , password: password)
                     } else {
                         ProgressHUD.showError("Password Not Matched")
                     }
                 } else {
-                    //Login
                     self.loginUser(email: email , password: password)
                 }
             } else {
@@ -155,7 +151,8 @@ class LoginViewController: UIViewController {
             if error == nil {
                 if isEmailVerified {
                     //MARK: - TODO ChatApp
-                    ProgressHUD.showSucceed("Done")
+                    self.gotoApp()
+                    ProgressHUD.showSucceed("Welcome")
                 } else {
                     ProgressHUD.showFailed("please Verified , chek your Email")
                 }
@@ -187,6 +184,13 @@ class LoginViewController: UIViewController {
                 ProgressHUD.showFailed(error?.localizedDescription)
             }
         }
+    }
+    
+    //MARK: - Navgation To App
+    private func gotoApp() {
+        let mainView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainView") as! UITabBarController
+        mainView.modalPresentationStyle = .fullScreen
+        self.present(mainView, animated: true, completion: nil)
     }
 
     //MARK: - Tap Gesture Recognizer
