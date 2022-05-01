@@ -18,7 +18,7 @@ struct User: Codable {
     var status: String?
 }
 
-//MARK: - save user in userDefulats
+//MARK: - save user in userDefaults
 func saveUserLocally(_ user: User) {
     let encoder  = JSONEncoder()
     

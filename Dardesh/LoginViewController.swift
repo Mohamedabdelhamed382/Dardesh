@@ -92,6 +92,7 @@ class LoginViewController: UIViewController {
         }
     }
     
+    //MARK: - Check Input Data Method
     private func checkDataInput(mode: Mode) {
         switch mode {
         case .login:
@@ -99,16 +100,28 @@ class LoginViewController: UIViewController {
         case .register:
             if isDataInputFor(mode: isLogin ? .login : .register) {
                 print ("Data Input Correct")
-                ProgressHUD.showError("Data Input Correctlly")
-                //MARK: - TODO
-                //LOGIN OR REGISTER
+                ProgressHUD.showSucceed("Data Input Correctlly")
+                //MARK: - TODO LOGIN and REGISTER
+                let email = emailTextFieldOutlet.text!.removingLeadingSpaces()
+                let password = passwordTextFieldOutlet.text!.removingLeadingSpaces()
+                if isLogin == false {
+                    //Register
+                    if passwordTextFieldOutlet.text == confirmPasswordTextFieldOutlet.text {
+                        self.registerUser(email: email , password: password)
+                    } else {
+                        ProgressHUD.showError("Password Not Matched")
+                    }
+                } else {
+                    //Login
+                    self.loginUser(email: email , password: password)
+                }
             } else {
                 print ("all Fields is Required")
                 ProgressHUD.showError("all Fields is Required")
             }
         case .forgetPassword:
             if isDataInputFor(mode: .forgetPassword) {
-                ProgressHUD.showError("Data Input Correctlly")
+                ProgressHUD.showSucceed("Data Input Correctlly")
                 //MARK: - TODO
                 //ResetPassword
             } else {
@@ -117,7 +130,23 @@ class LoginViewController: UIViewController {
             }
         }
     }
-    
+    //MARK: - Register User
+    private func registerUser(email: String , password: String) {
+        FUserListener.shared.registerUserWith(email: email , password: password) { error in
+            if error == nil {
+                ProgressHUD.showSucceed("Verification Has Been sent to your Email")
+            } else {
+                ProgressHUD.showError(error?.localizedDescription)
+                print(error!)
+            }
+        }
+    }
+
+    //MARK: - Login User
+    private func loginUser(email: String , password: String) {
+        
+    }
+
     //MARK: - Tap Gesture Recognizer
     private func setupBagroundTap() {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
