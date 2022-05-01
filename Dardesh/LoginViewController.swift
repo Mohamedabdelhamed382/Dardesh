@@ -12,6 +12,7 @@ public enum Mode {
     case login
     case register
     case forgetPassword
+    case resendVerificationEmail
 }
 
 class LoginViewController: UIViewController {
@@ -52,6 +53,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func resendEmailPressed(_ sender: UIButton) {
+        checkDataInput(mode: .resendVerificationEmail)
     }
     
     @IBAction func registerPressed(_ sender: UIButton) {
@@ -87,13 +89,16 @@ class LoginViewController: UIViewController {
             return emailTextFieldOutlet.text != "" && passwordTextFieldOutlet.text != ""
         case .register:
             return emailTextFieldOutlet.text != "" && passwordTextFieldOutlet.text != "" && confirmPasswordTextFieldOutlet.text != ""
-        case .forgetPassword:
+        case .forgetPassword, .resendVerificationEmail:
             return emailTextFieldOutlet.text != ""
         }
     }
     
     //MARK: - Check Input Data Method
     private func checkDataInput(mode: Mode) {
+        let email = emailTextFieldOutlet.text!.whiteSpacesRemoved()
+        let password = passwordTextFieldOutlet.text!.whiteSpacesRemoved()
+        
         switch mode {
         case .login:
             break
@@ -101,9 +106,6 @@ class LoginViewController: UIViewController {
             if isDataInputFor(mode: isLogin ? .login : .register) {
                 print ("Data Input Correct")
                 ProgressHUD.showSucceed("Data Input Correctlly")
-                //MARK: - TODO LOGIN and REGISTER
-                let email = emailTextFieldOutlet.text!.removingLeadingSpaces()
-                let password = passwordTextFieldOutlet.text!.removingLeadingSpaces()
                 if isLogin == false {
                     //Register
                     if passwordTextFieldOutlet.text == confirmPasswordTextFieldOutlet.text {
@@ -121,12 +123,17 @@ class LoginViewController: UIViewController {
             }
         case .forgetPassword:
             if isDataInputFor(mode: .forgetPassword) {
-                ProgressHUD.showSucceed("Data Input Correctlly")
-                //MARK: - TODO
-                //ResetPassword
+                resetPassword(email: email)
             } else {
-                print ("all Fields is Required")
-                ProgressHUD.showError("all Fields is Required")
+                print ("Email Field is Required")
+                ProgressHUD.showError("Email Field is Required")
+            }
+        case .resendVerificationEmail:
+            if isDataInputFor(mode: .resendVerificationEmail) {
+                resendVerificationEmail(email: email)
+            } else {
+                print ("Email Field is Required")
+                ProgressHUD.showError("Email Field is Required")
             }
         }
     }
@@ -153,6 +160,30 @@ class LoginViewController: UIViewController {
                     ProgressHUD.showFailed("please Verified , chek your Email")
                 }
             } else {
+                ProgressHUD.showFailed(error?.localizedDescription)
+            }
+        }
+    }
+    
+    //MARK: - Resend Verification Email
+    private func resendVerificationEmail(email: String) {
+        FUserListener.shared.resendVerificationEmailWith(email: email) { error in
+            if error == nil {
+                ProgressHUD.showSucceed(" Verification Has Been Sent, Please chek Your Email ")
+            } else {
+                print(error!)
+                ProgressHUD.showFailed(error?.localizedDescription)
+            }
+        }
+    }
+    
+    //MARK: - ResetPassword
+    private func resetPassword(email: String) {
+        FUserListener.shared.resetPasswordWith(email: email) { error in
+            if error == nil {
+                ProgressHUD.showSucceed(" Reset Password Email Has Been Sent, Please chek Your Email ")
+            } else {
+                print(error!)
                 ProgressHUD.showFailed(error?.localizedDescription)
             }
         }

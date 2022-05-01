@@ -24,7 +24,6 @@ class FUserListener {
             } else {
                 completion(error, false)
             }
-            
         }
     }
     
@@ -42,6 +41,22 @@ class FUserListener {
                 let user = User(id: authResult?.user.uid, username: email, email: email, pushId: "", avatarLink: "", status: "Hey, Iam using Dardesh")
                 self.saveUserToFirestore(user)
             }
+        }
+    }
+    
+    //MARK: - Resend Verification Email
+    func resendVerificationEmailWith(email: String, completion: @escaping (_ error: Error?) -> Void) {
+        Auth.auth().currentUser?.reload(completion: { error in
+            Auth.auth().currentUser?.sendEmailVerification(completion: { error in
+                completion(error)
+            })
+        })
+    }
+    
+    //MARK: - Reset Password
+    func resetPasswordWith(email: String, completion: @escaping (_ error: Error?) -> Void) {
+        Auth.auth().sendPasswordReset(withEmail: email) { error in
+            completion(error)
         }
     }
     
