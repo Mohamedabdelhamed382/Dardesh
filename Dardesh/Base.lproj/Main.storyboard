@@ -193,6 +193,56 @@
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="98.641304347826093"/>
         </scene>
+        <!--Item 2-->
+        <scene sceneID="8qE-wq-gos">
+            <objects>
+                <viewController id="Kif-ai-UWZ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PK3-3O-kTD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="kT9-SB-zoD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="Xyr-Mc-u0n"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hsp-NN-spz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1754" y="457"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="UKl-DA-kWh">
+            <objects>
+                <viewController id="Zjc-dv-gKh" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qEx-MJ-g5B">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="DYh-jx-B6D"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="A1w-ny-vbw"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zu6-pD-974" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1754" y="-152"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="CV3-Fq-M5d">
+            <objects>
+                <tabBarController storyboardIdentifier="MainView" id="Zii-0D-qKS" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xsL-U8-KwK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Zjc-dv-gKh" kind="relationship" relationship="viewControllers" id="FKP-qX-Loo"/>
+                        <segue destination="Kif-ai-UWZ" kind="relationship" relationship="viewControllers" id="h7t-ah-WdP"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZwJ-0K-cfA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="849" y="99"/>
+        </scene>
     </scenes>
     <resources>
         <namedColor name="AccentColor">

@@ -12,6 +12,7 @@ public enum Mode {
     case login
     case register
     case forgetPassword
+    case resendVerificationEmail
 }
 
 class LoginViewController: UIViewController {
@@ -52,6 +53,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func resendEmailPressed(_ sender: UIButton) {
+        checkDataInput(mode: .resendVerificationEmail)
     }
     
     @IBAction func registerPressed(_ sender: UIButton) {
@@ -87,37 +89,110 @@ class LoginViewController: UIViewController {
             return emailTextFieldOutlet.text != "" && passwordTextFieldOutlet.text != ""
         case .register:
             return emailTextFieldOutlet.text != "" && passwordTextFieldOutlet.text != "" && confirmPasswordTextFieldOutlet.text != ""
-        case .forgetPassword:
+        case .forgetPassword, .resendVerificationEmail:
             return emailTextFieldOutlet.text != ""
         }
     }
     
+    //MARK: - Check Input Data Method
     private func checkDataInput(mode: Mode) {
+        let email = emailTextFieldOutlet.text!.whiteSpacesRemoved()
+        let password = passwordTextFieldOutlet.text!.whiteSpacesRemoved()
+        
         switch mode {
         case .login:
             break
         case .register:
             if isDataInputFor(mode: isLogin ? .login : .register) {
-                print ("Data Input Correct")
-                ProgressHUD.showError("Data Input Correctlly")
-                //MARK: - TODO
-                //LOGIN OR REGISTER
+                if isLogin == false {
+                    if passwordTextFieldOutlet.text == confirmPasswordTextFieldOutlet.text {
+                        self.registerUser(email: email , password: password)
+                    } else {
+                        ProgressHUD.showError("Password Not Matched")
+                    }
+                } else {
+                    self.loginUser(email: email , password: password)
+                }
             } else {
                 print ("all Fields is Required")
                 ProgressHUD.showError("all Fields is Required")
             }
         case .forgetPassword:
             if isDataInputFor(mode: .forgetPassword) {
-                ProgressHUD.showError("Data Input Correctlly")
-                //MARK: - TODO
-                //ResetPassword
+                resetPassword(email: email)
             } else {
-                print ("all Fields is Required")
-                ProgressHUD.showError("all Fields is Required")
+                print ("Email Field is Required")
+                ProgressHUD.showError("Email Field is Required")
+            }
+        case .resendVerificationEmail:
+            if isDataInputFor(mode: .resendVerificationEmail) {
+                resendVerificationEmail(email: email)
+            } else {
+                print ("Email Field is Required")
+                ProgressHUD.showError("Email Field is Required")
+            }
+        }
+    }
+    //MARK: - Register User
+    private func registerUser(email: String , password: String) {
+        FUserListener.shared.registerUserWith(email: email , password: password) { error in
+            if error == nil {
+                ProgressHUD.showSucceed("Verification Has Been sent to your Email")
+            } else {
+                ProgressHUD.showError(error?.localizedDescription)
+                print(error!)
+            }
+        }
+    }
+
+    //MARK: - Login User
+    private func loginUser(email: String , password: String) {
+        FUserListener.shared.loginUserWith(email: email, password: password) { error, isEmailVerified in
+            if error == nil {
+                if isEmailVerified {
+                    //MARK: - TODO ChatApp
+                    self.gotoApp()
+                    ProgressHUD.showSucceed("Welcome")
+                } else {
+                    ProgressHUD.showFailed("please Verified , chek your Email")
+                }
+            } else {
+                ProgressHUD.showFailed(error?.localizedDescription)
             }
         }
     }
     
+    //MARK: - Resend Verification Email
+    private func resendVerificationEmail(email: String) {
+        FUserListener.shared.resendVerificationEmailWith(email: email) { error in
+            if error == nil {
+                ProgressHUD.showSucceed(" Verification Has Been Sent, Please chek Your Email ")
+            } else {
+                print(error!)
+                ProgressHUD.showFailed(error?.localizedDescription)
+            }
+        }
+    }
+    
+    //MARK: - ResetPassword
+    private func resetPassword(email: String) {
+        FUserListener.shared.resetPasswordWith(email: email) { error in
+            if error == nil {
+                ProgressHUD.showSucceed(" Reset Password Email Has Been Sent, Please chek Your Email ")
+            } else {
+                print(error!)
+                ProgressHUD.showFailed(error?.localizedDescription)
+            }
+        }
+    }
+    
+    //MARK: - Navgation To App
+    private func gotoApp() {
+        let mainView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainView") as! UITabBarController
+        mainView.modalPresentationStyle = .fullScreen
+        self.present(mainView, animated: true, completion: nil)
+    }
+
     //MARK: - Tap Gesture Recognizer
     private func setupBagroundTap() {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))

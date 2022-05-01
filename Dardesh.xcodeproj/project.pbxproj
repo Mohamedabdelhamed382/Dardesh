@@ -14,6 +14,12 @@
 		21631F61281CAE98003B8725 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21631F60281CAE98003B8725 /* Assets.xcassets */; };
 		21631F64281CAE98003B8725 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21631F62281CAE98003B8725 /* LaunchScreen.storyboard */; };
 		21631F71281CF743003B8725 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 21631F70281CF743003B8725 /* GoogleService-Info.plist */; };
+		218EE318281DFCDB00B97971 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218EE317281DFCDB00B97971 /* User.swift */; };
+		218EE31B281E04C700B97971 /* FCollectionRefernce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218EE31A281E04C700B97971 /* FCollectionRefernce.swift */; };
+		218EE31D281E077A00B97971 /* FUserListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218EE31C281E077A00B97971 /* FUserListener.swift */; };
+		218EE31F281E133A00B97971 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218EE31E281E133A00B97971 /* Constants.swift */; };
+		218EE322281E32E500B97971 /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 218EE321281E32E500B97971 /* AuthenticationServices.framework */; };
+		218EE325281E3A6C00B97971 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218EE324281E3A6C00B97971 /* String+Extension.swift */; };
 		54C445075A5FEB221880B1D5 /* Pods_Dardesh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72CF15BC1EEB915F138FCDCE /* Pods_Dardesh.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +33,12 @@
 		21631F63281CAE98003B8725 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		21631F65281CAE98003B8725 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		21631F70281CF743003B8725 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		218EE317281DFCDB00B97971 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		218EE31A281E04C700B97971 /* FCollectionRefernce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCollectionRefernce.swift; sourceTree = "<group>"; };
+		218EE31C281E077A00B97971 /* FUserListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FUserListener.swift; sourceTree = "<group>"; };
+		218EE31E281E133A00B97971 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		218EE321281E32E500B97971 /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = System/Library/Frameworks/AuthenticationServices.framework; sourceTree = SDKROOT; };
+		218EE324281E3A6C00B97971 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		6F39C4BAE55E98A3111B31B0 /* Pods-Dardesh.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dardesh.debug.xcconfig"; path = "Target Support Files/Pods-Dardesh/Pods-Dardesh.debug.xcconfig"; sourceTree = "<group>"; };
 		72CF15BC1EEB915F138FCDCE /* Pods_Dardesh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dardesh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		949430FE2CD7F211DAF4C8F5 /* Pods-Dardesh.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dardesh.release.xcconfig"; path = "Target Support Files/Pods-Dardesh/Pods-Dardesh.release.xcconfig"; sourceTree = "<group>"; };
@@ -37,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				218EE322281E32E500B97971 /* AuthenticationServices.framework in Frameworks */,
 				54C445075A5FEB221880B1D5 /* Pods_Dardesh.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -65,6 +78,7 @@
 		21631F56281CAE93003B8725 /* Dardesh */ = {
 			isa = PBXGroup;
 			children = (
+				218EE323281E3A4A00B97971 /* Extension */,
 				21631F57281CAE93003B8725 /* AppDelegate.swift */,
 				21631F59281CAE93003B8725 /* SceneDelegate.swift */,
 				21631F5B281CAE93003B8725 /* LoginViewController.swift */,
@@ -73,8 +87,28 @@
 				21631F62281CAE98003B8725 /* LaunchScreen.storyboard */,
 				21631F65281CAE98003B8725 /* Info.plist */,
 				21631F70281CF743003B8725 /* GoogleService-Info.plist */,
+				218EE319281DFDFA00B97971 /* Model */,
+				218EE31A281E04C700B97971 /* FCollectionRefernce.swift */,
+				218EE31C281E077A00B97971 /* FUserListener.swift */,
+				218EE31E281E133A00B97971 /* Constants.swift */,
 			);
 			path = Dardesh;
+			sourceTree = "<group>";
+		};
+		218EE319281DFDFA00B97971 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				218EE317281DFCDB00B97971 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		218EE323281E3A4A00B97971 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				218EE324281E3A6C00B97971 /* String+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		67D6DE5BB2A9DD9ABB5C545A /* Pods */ = {
@@ -89,6 +123,7 @@
 		A66B0061EA876953D1176C09 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				218EE321281E32E500B97971 /* AuthenticationServices.framework */,
 				72CF15BC1EEB915F138FCDCE /* Pods_Dardesh.framework */,
 			);
 			name = Frameworks;
@@ -214,7 +249,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				218EE325281E3A6C00B97971 /* String+Extension.swift in Sources */,
+				218EE318281DFCDB00B97971 /* User.swift in Sources */,
+				218EE31B281E04C700B97971 /* FCollectionRefernce.swift in Sources */,
 				21631F5C281CAE93003B8725 /* LoginViewController.swift in Sources */,
+				218EE31D281E077A00B97971 /* FUserListener.swift in Sources */,
+				218EE31F281E133A00B97971 /* Constants.swift in Sources */,
 				21631F58281CAE93003B8725 /* AppDelegate.swift in Sources */,
 				21631F5A281CAE93003B8725 /* SceneDelegate.swift in Sources */,
 			);
@@ -364,8 +404,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Dardesh/Dardesh.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Dardesh/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -379,11 +421,11 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = mohamedAbdelhamed.Dardesh;
+				PRODUCT_BUNDLE_IDENTIFIER = mohamedAbdelhamed382.Dardesh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -393,8 +435,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Dardesh/Dardesh.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Dardesh/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -408,11 +453,12 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = mohamedAbdelhamed.Dardesh;
+				PRODUCT_BUNDLE_IDENTIFIER = mohamedAbdelhamed382.Dardesh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
