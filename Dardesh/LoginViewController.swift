@@ -144,7 +144,18 @@ class LoginViewController: UIViewController {
 
     //MARK: - Login User
     private func loginUser(email: String , password: String) {
-        
+        FUserListener.shared.loginUserWith(email: email, password: password) { error, isEmailVerified in
+            if error == nil {
+                if isEmailVerified {
+                    //MARK: - TODO ChatApp
+                    ProgressHUD.showSucceed("Done")
+                } else {
+                    ProgressHUD.showFailed("please Verified , chek your Email")
+                }
+            } else {
+                ProgressHUD.showFailed(error?.localizedDescription)
+            }
+        }
     }
 
     //MARK: - Tap Gesture Recognizer
