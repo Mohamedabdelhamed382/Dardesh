@@ -17,6 +17,7 @@
 		218EE318281DFCDB00B97971 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218EE317281DFCDB00B97971 /* User.swift */; };
 		218EE31B281E04C700B97971 /* FCollectionRefernce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218EE31A281E04C700B97971 /* FCollectionRefernce.swift */; };
 		218EE31D281E077A00B97971 /* FUserListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218EE31C281E077A00B97971 /* FUserListener.swift */; };
+		218EE31F281E133A00B97971 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218EE31E281E133A00B97971 /* Constants.swift */; };
 		54C445075A5FEB221880B1D5 /* Pods_Dardesh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72CF15BC1EEB915F138FCDCE /* Pods_Dardesh.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		218EE317281DFCDB00B97971 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		218EE31A281E04C700B97971 /* FCollectionRefernce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCollectionRefernce.swift; sourceTree = "<group>"; };
 		218EE31C281E077A00B97971 /* FUserListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FUserListener.swift; sourceTree = "<group>"; };
+		218EE31E281E133A00B97971 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		6F39C4BAE55E98A3111B31B0 /* Pods-Dardesh.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dardesh.debug.xcconfig"; path = "Target Support Files/Pods-Dardesh/Pods-Dardesh.debug.xcconfig"; sourceTree = "<group>"; };
 		72CF15BC1EEB915F138FCDCE /* Pods_Dardesh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dardesh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		949430FE2CD7F211DAF4C8F5 /* Pods-Dardesh.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dardesh.release.xcconfig"; path = "Target Support Files/Pods-Dardesh/Pods-Dardesh.release.xcconfig"; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				218EE319281DFDFA00B97971 /* Model */,
 				218EE31A281E04C700B97971 /* FCollectionRefernce.swift */,
 				218EE31C281E077A00B97971 /* FUserListener.swift */,
+				218EE31E281E133A00B97971 /* Constants.swift */,
 			);
 			path = Dardesh;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 				218EE31B281E04C700B97971 /* FCollectionRefernce.swift in Sources */,
 				21631F5C281CAE93003B8725 /* LoginViewController.swift in Sources */,
 				218EE31D281E077A00B97971 /* FUserListener.swift in Sources */,
+				218EE31F281E133A00B97971 /* Constants.swift in Sources */,
 				21631F58281CAE93003B8725 /* AppDelegate.swift in Sources */,
 				21631F5A281CAE93003B8725 /* SceneDelegate.swift in Sources */,
 			);
