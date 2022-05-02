@@ -13,7 +13,8 @@
 		21631F5F281CAE93003B8725 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21631F5D281CAE93003B8725 /* Main.storyboard */; };
 		21631F61281CAE98003B8725 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21631F60281CAE98003B8725 /* Assets.xcassets */; };
 		21631F64281CAE98003B8725 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21631F62281CAE98003B8725 /* LaunchScreen.storyboard */; };
-		21631F71281CF743003B8725 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 21631F70281CF743003B8725 /* GoogleService-Info.plist */; };
+		217E87BE2820741E00A037B1 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217E87BD2820741E00A037B1 /* SettingsTableViewController.swift */; };
+		217E87C62820A28B00A037B1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 217E87C52820A28B00A037B1 /* GoogleService-Info.plist */; };
 		218EE318281DFCDB00B97971 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218EE317281DFCDB00B97971 /* User.swift */; };
 		218EE31B281E04C700B97971 /* FCollectionRefernce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218EE31A281E04C700B97971 /* FCollectionRefernce.swift */; };
 		218EE31D281E077A00B97971 /* FUserListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218EE31C281E077A00B97971 /* FUserListener.swift */; };
@@ -32,7 +33,8 @@
 		21631F60281CAE98003B8725 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		21631F63281CAE98003B8725 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		21631F65281CAE98003B8725 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		21631F70281CF743003B8725 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		217E87BD2820741E00A037B1 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		217E87C52820A28B00A037B1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		218EE317281DFCDB00B97971 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		218EE31A281E04C700B97971 /* FCollectionRefernce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCollectionRefernce.swift; sourceTree = "<group>"; };
 		218EE31C281E077A00B97971 /* FUserListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FUserListener.swift; sourceTree = "<group>"; };
@@ -78,21 +80,70 @@
 		21631F56281CAE93003B8725 /* Dardesh */ = {
 			isa = PBXGroup;
 			children = (
+				217E87C42820A15700A037B1 /* Resoures */,
+				217E87C32820A13900A037B1 /* Helpers */,
+				217E87C22820A10E00A037B1 /* Delegate */,
+				217E87C12820A0E300A037B1 /* Controller */,
+				217E87C02820A0BA00A037B1 /* View */,
+				217E87BF2820A07C00A037B1 /* Firebase */,
 				218EE323281E3A4A00B97971 /* Extension */,
-				21631F57281CAE93003B8725 /* AppDelegate.swift */,
-				21631F59281CAE93003B8725 /* SceneDelegate.swift */,
-				21631F5B281CAE93003B8725 /* LoginViewController.swift */,
-				21631F5D281CAE93003B8725 /* Main.storyboard */,
-				21631F60281CAE98003B8725 /* Assets.xcassets */,
-				21631F62281CAE98003B8725 /* LaunchScreen.storyboard */,
-				21631F65281CAE98003B8725 /* Info.plist */,
-				21631F70281CF743003B8725 /* GoogleService-Info.plist */,
 				218EE319281DFDFA00B97971 /* Model */,
-				218EE31A281E04C700B97971 /* FCollectionRefernce.swift */,
-				218EE31C281E077A00B97971 /* FUserListener.swift */,
-				218EE31E281E133A00B97971 /* Constants.swift */,
+				21631F65281CAE98003B8725 /* Info.plist */,
 			);
 			path = Dardesh;
+			sourceTree = "<group>";
+		};
+		217E87BF2820A07C00A037B1 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				218EE31A281E04C700B97971 /* FCollectionRefernce.swift */,
+				218EE31C281E077A00B97971 /* FUserListener.swift */,
+				217E87C52820A28B00A037B1 /* GoogleService-Info.plist */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		217E87C02820A0BA00A037B1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				21631F5D281CAE93003B8725 /* Main.storyboard */,
+				21631F62281CAE98003B8725 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		217E87C12820A0E300A037B1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				217E87BD2820741E00A037B1 /* SettingsTableViewController.swift */,
+				21631F5B281CAE93003B8725 /* LoginViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		217E87C22820A10E00A037B1 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				21631F57281CAE93003B8725 /* AppDelegate.swift */,
+				21631F59281CAE93003B8725 /* SceneDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		217E87C32820A13900A037B1 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				218EE31E281E133A00B97971 /* Constants.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		217E87C42820A15700A037B1 /* Resoures */ = {
+			isa = PBXGroup;
+			children = (
+				21631F60281CAE98003B8725 /* Assets.xcassets */,
+			);
+			path = Resoures;
 			sourceTree = "<group>";
 		};
 		218EE319281DFDFA00B97971 /* Model */ = {
@@ -194,7 +245,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				21631F64281CAE98003B8725 /* LaunchScreen.storyboard in Resources */,
-				21631F71281CF743003B8725 /* GoogleService-Info.plist in Resources */,
+				217E87C62820A28B00A037B1 /* GoogleService-Info.plist in Resources */,
 				21631F61281CAE98003B8725 /* Assets.xcassets in Resources */,
 				21631F5F281CAE93003B8725 /* Main.storyboard in Resources */,
 			);
@@ -257,6 +308,7 @@
 				218EE31F281E133A00B97971 /* Constants.swift in Sources */,
 				21631F58281CAE93003B8725 /* AppDelegate.swift in Sources */,
 				21631F5A281CAE93003B8725 /* SceneDelegate.swift in Sources */,
+				217E87BE2820741E00A037B1 /* SettingsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
