@@ -150,7 +150,6 @@ class LoginViewController: UIViewController {
         FUserListener.shared.loginUserWith(email: email, password: password) { error, isEmailVerified in
             if error == nil {
                 if isEmailVerified {
-                    //MARK: - TODO ChatApp
                     self.gotoApp()
                     ProgressHUD.showSucceed("Welcome")
                 } else {
