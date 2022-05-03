@@ -359,6 +359,9 @@ PODS:
     - nanopb/encode (= 1.30906.0)
   - nanopb/decode (1.30906.0)
   - nanopb/encode (1.30906.0)
+  - NVActivityIndicatorView (5.1.1):
+    - NVActivityIndicatorView/Base (= 5.1.1)
+  - NVActivityIndicatorView/Base (5.1.1)
   - ProgressHUD (13.6)
   - PromisesObjC (1.2.12)
   - Protobuf (3.19.4)
@@ -380,6 +383,7 @@ DEPENDENCIES:
   - Gallery
   - InputBarAccessoryView
   - MessageKit
+  - NVActivityIndicatorView
   - ProgressHUD
   - RealmSwift (~> 10)
   - SKPhotoBrowser
@@ -410,6 +414,7 @@ SPEC REPOS:
     - leveldb-library
     - MessageKit
     - nanopb
+    - NVActivityIndicatorView
     - ProgressHUD
     - PromisesObjC
     - Protobuf
@@ -442,6 +447,7 @@ SPEC CHECKSUMS:
   leveldb-library: 50c7b45cbd7bf543c81a468fe557a16ae3db8729
   MessageKit: 8e76dd8d65ad44b49e1651c673497146416461e9
   nanopb: 59317e09cf1f1a0af72f12af412d54edf52603fc
+  NVActivityIndicatorView: 1f6c5687f1171810aa27a3296814dc2d7dec3667
   ProgressHUD: 4bdaa0d2ddf676b23324b199f9facffb5c3a1620
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
   Protobuf: 235750e4696ff59fb07d949a9dbbc92b3c0700fe
@@ -449,6 +455,6 @@ SPEC CHECKSUMS:
   RealmSwift: 0b03bb38001bee4280dcc27709e6b33f438cfad1
   SKPhotoBrowser: 6aaa8f232752e87c7e76bace183bead0a137097d
 
-PODFILE CHECKSUM: e787dca41a047410a1737d3c38eca0f99bdfb1a4
+PODFILE CHECKSUM: b4a613e8d6b51ade0421679b12b1a4cf2aedafa2
 
 COCOAPODS: 1.11.3

@@ -44,6 +44,18 @@ class FUserListener {
         }
     }
     
+    //MARK: - LogOut
+    func logOutCurrentuser(completion: @escaping (_ error: Error?) -> Void) {
+        do {
+            try Auth.auth().signOut()
+            userDefaults.removeObject(forKey: kCurrentUser)
+            userDefaults.synchronize()
+            completion(nil)
+        } catch {
+            completion(error)
+        }
+    }
+    
     //MARK: - Resend Verification Email
     func resendVerificationEmailWith(email: String, completion: @escaping (_ error: Error?) -> Void) {
         Auth.auth().currentUser?.reload(completion: { error in

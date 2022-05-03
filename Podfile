@@ -24,4 +24,6 @@ pod 'SKPhotoBrowser'
 pod 'MessageKit'
 pod 'InputBarAccessoryView'
 
+pod 'NVActivityIndicatorView'
+
 end

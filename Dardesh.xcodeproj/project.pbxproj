@@ -21,6 +21,7 @@
 		218EE31F281E133A00B97971 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218EE31E281E133A00B97971 /* Constants.swift */; };
 		218EE322281E32E500B97971 /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 218EE321281E32E500B97971 /* AuthenticationServices.framework */; };
 		218EE325281E3A6C00B97971 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218EE324281E3A6C00B97971 /* String+Extension.swift */; };
+		21E01B112820D6E2002E1626 /* ViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E01B102820D6E2002E1626 /* ViewController + Extension.swift */; };
 		54C445075A5FEB221880B1D5 /* Pods_Dardesh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72CF15BC1EEB915F138FCDCE /* Pods_Dardesh.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 		218EE31E281E133A00B97971 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		218EE321281E32E500B97971 /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = System/Library/Frameworks/AuthenticationServices.framework; sourceTree = SDKROOT; };
 		218EE324281E3A6C00B97971 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		21E01B102820D6E2002E1626 /* ViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController + Extension.swift"; sourceTree = "<group>"; };
 		6F39C4BAE55E98A3111B31B0 /* Pods-Dardesh.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dardesh.debug.xcconfig"; path = "Target Support Files/Pods-Dardesh/Pods-Dardesh.debug.xcconfig"; sourceTree = "<group>"; };
 		72CF15BC1EEB915F138FCDCE /* Pods_Dardesh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dardesh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		949430FE2CD7F211DAF4C8F5 /* Pods-Dardesh.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dardesh.release.xcconfig"; path = "Target Support Files/Pods-Dardesh/Pods-Dardesh.release.xcconfig"; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				218EE324281E3A6C00B97971 /* String+Extension.swift */,
+				21E01B102820D6E2002E1626 /* ViewController + Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21E01B112820D6E2002E1626 /* ViewController + Extension.swift in Sources */,
 				218EE325281E3A6C00B97971 /* String+Extension.swift in Sources */,
 				218EE318281DFCDB00B97971 /* User.swift in Sources */,
 				218EE31B281E04C700B97971 /* FCollectionRefernce.swift in Sources */,

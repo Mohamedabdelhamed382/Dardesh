@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import NVActivityIndicatorView
 
 class SettingsTableViewController: UITableViewController {
     
@@ -34,6 +35,8 @@ class SettingsTableViewController: UITableViewController {
     }
     
     @IBAction func logOutButtonPressed(_ sender: UIButton) {
+        startLoadingIndicator()
+        logoutCurrentUser()
     }
 }
 
@@ -53,6 +56,20 @@ extension SettingsTableViewController {
             
             if user.avatarLink != "" {
                 //MARK: - TODO Download and set user image
+            }
+        }
+    }
+    
+    //MARK: - Logout CurrentUser
+    private func logoutCurrentUser() {
+              FUserListener.shared.logOutCurrentuser { error in
+            if error == nil {
+                let loginView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginView")
+                DispatchQueue.main.async {
+                    loginView.modalPresentationStyle = .fullScreen
+                    self.present(loginView, animated: true, completion: nil)
+                }
+                self.stopLoadingIndicator()
             }
         }
     }
